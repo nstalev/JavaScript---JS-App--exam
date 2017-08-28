@@ -1,0 +1,42 @@
+    <div class="post" data-id="{{_id}}">
+        <div class="col thumbnail">
+            <a href="{{url}}">
+
+                <img src="{{imageUrl}}">
+            </a>
+        </div>
+        <div class="post-content">
+            <div class="title">
+                <a href="{{url}}">
+                    {{title}}
+                </a>
+            </div>
+            <div class="details">
+                <p>{{description}}</p>
+                <div class="info">
+                    {{info}}
+                </div>
+                <div class="controls">
+                    {{#if isAuthor}}
+                    <ul>
+                        <li class="action"><a class="editLink edit" href="#">edit</a></li>
+                        <li class="action"><a class="deleteLink delete" href="#">delete</a></li>
+
+                    </ul>
+                    {{/if}}
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post post-content" data-id="{{_id}}">
+        <form id="commentForm">
+            <label>Comment</label>
+            <textarea name="content" id="text" type="text"></textarea>
+            <input type="submit" value="Add Comment" id="btnPostComment">
+        </form>
+    </div>
+    <div id="commentsContent">
+
+    </div>

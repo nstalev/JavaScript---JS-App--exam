@@ -1,0 +1,10 @@
+<div class="post post-content">
+    <h1>Your Posts</h1>
+</div>
+<div class="posts">
+    {{#each myPostData}}
+    {{>myPost}}
+    {{else}}
+    <p>No posts in database</p>
+    {{/each}}
+</div>
